@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "367847a12766bf96e27321e52f945cb0",
+    "entities": [
+      {
+        "tableName": "sensor_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `xAccel` REAL NOT NULL, `yAccel` REAL NOT NULL, `zAccel` REAL NOT NULL, `xGyro` REAL NOT NULL, `yGyro` REAL NOT NULL, `zGyro` REAL NOT NULL, `label` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xAccel",
+            "columnName": "xAccel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "yAccel",
+            "columnName": "yAccel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "zAccel",
+            "columnName": "zAccel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xGyro",
+            "columnName": "xGyro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "yGyro",
+            "columnName": "yGyro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "zGyro",
+            "columnName": "zGyro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '367847a12766bf96e27321e52f945cb0')"
+    ]
+  }
+}
