@@ -287,7 +287,7 @@ def submit_weights():
             SERVER_STATE["global_model_weights"] = new_global_weights
             print(" > Global model updated via Federated Averaging.")
 
-            # --- NEW: Compute metrics and generate plots for the completed round ---
+           
             compute_and_plot_round_metrics(current_round_num)
             
             SERVER_STATE["current_round"] += 1
@@ -315,13 +315,11 @@ def reset_demo():
     else:
         return jsonify({"message": "Failed to reset server state."}), 500
 
-# =================================================================================
-#                   NEW: DASHBOARD & PLOTTING ENDPOINTS
-# =================================================================================
+
 @app.route('/dashboard')
 def dashboard():
     """A simple HTML page to view the plots."""
-    # Use a timestamp to force the browser to reload the images
+  
     timestamp = int(time.time())
     return Response(f"""
     <html>
@@ -352,9 +350,7 @@ def serve_metrics():
     with METRICS_LOCK:
         return jsonify(METRICS_HISTORY)
 
-# =================================================================================
-#                                 SERVER STARTUP
-# =================================================================================
+
 if __name__ == '__main__':
     load_metrics_history()
     if load_initial_weights():
