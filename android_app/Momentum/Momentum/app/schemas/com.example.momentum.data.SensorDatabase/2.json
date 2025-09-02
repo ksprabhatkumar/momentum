@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "a31d9c9a3151d884e2d4f09ea99d5c09",
+    "entities": [
+      {
+        "tableName": "sensor_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `xAccel` REAL NOT NULL, `yAccel` REAL NOT NULL, `zAccel` REAL NOT NULL, `xGyro` REAL NOT NULL, `yGyro` REAL NOT NULL, `zGyro` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xAccel",
+            "columnName": "xAccel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "yAccel",
+            "columnName": "yAccel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "zAccel",
+            "columnName": "zAccel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xGyro",
+            "columnName": "xGyro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "yGyro",
+            "columnName": "yGyro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "zGyro",
+            "columnName": "zGyro",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "labeled_windows",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `start_timestamp` INTEGER NOT NULL, `label` TEXT NOT NULL, `window_data_json` TEXT NOT NULL, `model_version` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "start_timestamp",
+            "columnName": "start_timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "window_data_json",
+            "columnName": "window_data_json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "model_version",
+            "columnName": "model_version",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a31d9c9a3151d884e2d4f09ea99d5c09')"
+    ]
+  }
+}
