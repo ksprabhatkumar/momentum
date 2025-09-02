@@ -1,0 +1,16 @@
+Overall Performance on Unseen Client Data
+==================================================
+Overall Accuracy: 0.7622
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           A       1.00      0.12      0.21      1356
+           B       0.96      0.95      0.96      2812
+           C       0.00      0.00      0.00         0
+           D       0.60      1.00      0.75      1428
+           E       0.00      0.00      0.00         0
+
+    accuracy                           0.76      5596
+   macro avg       0.51      0.41      0.38      5596
+weighted avg       0.88      0.76      0.72      5596
