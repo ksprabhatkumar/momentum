@@ -1,0 +1,2 @@
+This data isn't ever used to directly train the model.
+Just used in on-device training during Federated Learning, it's here to be used for evaluation.
