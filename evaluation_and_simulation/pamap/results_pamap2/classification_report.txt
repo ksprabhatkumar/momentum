@@ -1,0 +1,17 @@
+Test Accuracy: 0.9917
+
+                 precision    recall  f1-score   support
+
+          lying       1.00      0.99      1.00       959
+        sitting       0.99      0.98      0.99       923
+       standing       0.98      0.99      0.98       947
+        walking       1.00      1.00      1.00      1191
+        running       1.00      1.00      1.00       488
+        cycling       1.00      1.00      1.00       820
+ Nordic_walking       0.99      1.00      1.00       938
+vacuum_cleaning       0.98      0.99      0.99       874
+        ironing       0.99      0.99      0.99      1190
+
+       accuracy                           0.99      8330
+      macro avg       0.99      0.99      0.99      8330
+   weighted avg       0.99      0.99      0.99      8330
