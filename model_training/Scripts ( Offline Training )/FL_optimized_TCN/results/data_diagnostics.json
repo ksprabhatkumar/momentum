@@ -1,0 +1,9 @@
+{
+  "n_windows_total": 56083,
+  "n_subjects_total": 72,
+  "n_train": 37209,
+  "n_val": 7263,
+  "n_test": 11611,
+  "identical_train_test": 0,
+  "identical_train_val": 0
+}
